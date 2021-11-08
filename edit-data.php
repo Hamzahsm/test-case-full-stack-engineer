@@ -15,9 +15,10 @@ $result    =mysqli_fetch_array($query);
         $deskripsi = $_POST['deskripsi'];
         $harga = $_POST['harga'];
         $kategori = $_POST['kategori'];
+        $upload = $_POST['upload'];
 
 
-        $query = "UPDATE admin SET namaproduk = '$nama', deskripsi = '$deskripsi', harga = '$harga', kategori = '$kategori' WHERE id = '$id'";
+        $query = "UPDATE admin SET namaproduk = '$nama', deskripsi = '$deskripsi', harga = '$harga', kategori = '$kategori', upload = '$upload' WHERE id = '$id'";
 
         // $result = mysqli_query($con, $query)  or die (mysqli_error($con)) ;
 
@@ -69,7 +70,7 @@ $result    =mysqli_fetch_array($query);
 <!-- title start here -->
 
 <div class="text-center mt-5">
-        <h3> UPDATE HARGA JUAL  </h3>
+        <h3> UPDATE DATA </h3>
     </div>
 
 <!-- title end her  -->
@@ -79,12 +80,9 @@ $result    =mysqli_fetch_array($query);
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card mt-5" style="box-shadow: 10px 10px 10px silver; border-radius: 20px;">
-                    <!-- <div class="card-header">
-                        <h4>Coba Dulu</h4>
-                    </div> -->
                     <div class="card-body"> 
 
-                        <form action="" method="POST">
+                        <form action="" method="POST" enctype="multipart/form-data">
 
                                 <label for="" class="form-label fw-bold mt-3">Nama Produk </label>
                                 <input type="text" id="" name="namaproduk" autocomplete="off" class="form-control" value="<?php echo $result['namaproduk']; ?>">
@@ -97,6 +95,9 @@ $result    =mysqli_fetch_array($query);
 
                                 <label for="" class="form-label fw-bold mt-3">Kategori </label>
                                 <input type="text" id="" name="kategori" autocomplete="off" class="form-control" value="<?php echo $result['kategori']; ?>">
+
+                                <label for="" class="form-label fw-bold mt-3">Gambar </label> <br>
+                                <input type="file" id="" name="upload" autocomplete="off" class="form-control mt-3" value="<?php echo $result['upload']; ?>">
 
 
 

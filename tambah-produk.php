@@ -64,7 +64,7 @@
                             </select>
 
                             <label for="" class="form-label mt-3 fw-bold">Upload Gambar</label>
-                            <input type="file" id="" multiple name="uploadgambar[]" class="form-control">
+                            <input type="file" id=""  name="gambar" class="form-control">
 
                             <div class="form-group mb-4 mt-5 text-center">
                                 <button type="submit" name="submit" class="btn btn-primary">Submit</button>

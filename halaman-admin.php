@@ -84,7 +84,8 @@ $datas = query("SELECT * FROM admin");
                                 <td><?= $data["deskripsi"]; ?></td>
                                 <td><?= $data["harga"]; ?></td>
                                 <td><?= $data["kategori"]; ?></td>
-                                <td><?= $data["upload"]; ?></td>
+                                <td><img src="./uploads/<?= $data['upload'];?>" alt="" width="200" height="100"> </td>
+                                <!-- <td><?= $data["upload"]; ?></td> -->
                                 <td><a href="hapus-data.php?id=<?= $data["id"]; ?>" onclick="return confirm('Apakah Anda Yakin?')" style="color: red;"> Hapus </a> | <a href="edit-data.php?id=<?= $data['id']; ?>"> Edit</a></td>
                             </tr>
                             <?php $i++; ?>
