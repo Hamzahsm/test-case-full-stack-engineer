@@ -17,11 +17,11 @@
     <nav id="navbar-example2" class="navbar navbar-light bg-light px-3" style="box-shadow: 0 5px 5px silver;">
         <!-- <a class="navbar-brand" href="#">Navbar</a> -->
         <div style="text-align: center;" class="navbar-brand">
-            <img src="https://oesman.id/wp-content/uploads/2020/08/OESMAN_logo-4.png" width="160px;" height="50px;">
+            <h3>Test Case</h3>
         </div>
         <ul class="nav nav-pills">
             <li class="nav-item">
-                <a class="nav-link fw-bold" href="welcome.php" style="color: black;">KEMBALI</a>
+                <a class="nav-link fw-bold" href="./halaman-admin.php" style="color: black;">KEMBALI</a>
             </li>
         </ul>
     </nav>
@@ -50,7 +50,7 @@
                             <input type="text" id="" name="deskripsi" autocomplete="off" required class="form-control">
 
                             <label for="" class="form-label fw-bold mt-3">Harga*</label>
-                            <input type="email" id="" name="harga" autocomplete="off" required class="form-control">
+                            <input type="text" id="" name="harga" autocomplete="off" required class="form-control">
 
                             <label for="" class="form-label fw-bold mt-3">Kategori</label>
                             <select name="kategori" id="" class="form-control">
@@ -67,7 +67,7 @@
                             <input type="file" id="" multiple name="uploadgambar[]" class="form-control">
 
                             <div class="form-group mb-4 mt-5 text-center">
-                                <button type="submit" name="tambah_produk" class="btn btn-primary">Submit</button>
+                                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                             </div>
                         </form>
 

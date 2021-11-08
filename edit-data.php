@@ -2,8 +2,8 @@
 
 $id = $_GET['id'];
 
-$conn = mysqli_connect("localhost","u705028021_loginsystem","Loginsystem321","u705028021_loginsystem");
-$query    =mysqli_query($conn, "SELECT * FROM formweb WHERE id= $id ");
+$conn = mysqli_connect("localhost","root","","majoo");
+$query    =mysqli_query($conn, "SELECT * FROM admin WHERE id= $id ");
 $result    =mysqli_fetch_array($query);
 
 ?>
@@ -11,9 +11,13 @@ $result    =mysqli_fetch_array($query);
 <?php 
 
     if(isset($_POST['submit'])){ 
-        $orderanke = $_POST['orderanke'];
+        $nama = $_POST['namaproduk'];
+        $deskripsi = $_POST['deskripsi'];
+        $harga = $_POST['harga'];
+        $kategori = $_POST['kategori'];
 
-        $query = "UPDATE formweb SET orderanke = '$orderanke' WHERE id = '$id'";
+
+        $query = "UPDATE admin SET namaproduk = '$nama', deskripsi = '$deskripsi', harga = '$harga', kategori = '$kategori' WHERE id = '$id'";
 
         // $result = mysqli_query($con, $query)  or die (mysqli_error($con)) ;
 
@@ -21,10 +25,10 @@ $result    =mysqli_fetch_array($query);
 
         if ($result) {
             echo "<script>alert('Data Berhasil di update');
-            document.location.href='database-penjualan-web.php'; </script>";    
+            document.location.href='halaman-admin.php'; </script>";    
         } else {
             echo "<script>alert('Data Gagal Di Update');
-            document.location.href='database-penjualan-web.php';</script>";    
+            document.location.href='halaman-admin.php';</script>";    
         }
 
     }
@@ -41,7 +45,7 @@ $result    =mysqli_fetch_array($query);
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Edit Status Order Ads</title>
+    <title>Edit Data</title>
   </head>
 <body>
 
@@ -55,7 +59,7 @@ $result    =mysqli_fetch_array($query);
         <div class="col-8">
         </div>
         <div class="col text-center">
-            <h5 style="line-height: 70px;"> <a href="database-penjualan-web.php" style="text-decoration: none;">Kembali</a></h5>
+            <h5 style="line-height: 70px;"> <a href="halaman-admin.php" style="text-decoration: none;">Kembali</a></h5>
         </div>
     </div>
 </header>
@@ -82,8 +86,17 @@ $result    =mysqli_fetch_array($query);
 
                         <form action="" method="POST">
 
-                                <label for="" class="form-label fw-bold mt-3">Orderan Ke </label>
-                                <input type="text" id="" name="orderanke" autocomplete="off" class="form-control" value="<?php echo $result['orderanke']; ?>">
+                                <label for="" class="form-label fw-bold mt-3">Nama Produk </label>
+                                <input type="text" id="" name="namaproduk" autocomplete="off" class="form-control" value="<?php echo $result['namaproduk']; ?>">
+
+                                <label for="" class="form-label fw-bold mt-3">Deskripsi </label>
+                                <input type="text" id="" name="deskripsi" autocomplete="off" class="form-control" value="<?php echo $result['deskripsi']; ?>">
+
+                                <label for="" class="form-label fw-bold mt-3">Harga </label>
+                                <input type="text" id="" name="harga" autocomplete="off" class="form-control" value="<?php echo $result['harga']; ?>">
+
+                                <label for="" class="form-label fw-bold mt-3">Kategori </label>
+                                <input type="text" id="" name="kategori" autocomplete="off" class="form-control" value="<?php echo $result['kategori']; ?>">
 
 
 

@@ -39,7 +39,7 @@ $datas = query("SELECT * FROM admin");
     <header>
         <div class="row" style="padding: 10px; box-shadow: 0 5px 5px silver;">
             <div class="col bg-green" style="padding: 10px;">
-                <img src="https://oesman.id/wp-content/uploads/2020/08/OESMAN_logo-4.png" width="200px;" height="60px;">
+                <h2>Test Case</h2>
             </div>
             <div class="col-8">
             </div>
@@ -73,6 +73,7 @@ $datas = query("SELECT * FROM admin");
                             <th scope="col">Harga Produk</th>
                             <th scope="col">Kategori Produk</th>
                             <th scope="col">Gambar</th>
+                            <th scope="col">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -84,7 +85,7 @@ $datas = query("SELECT * FROM admin");
                                 <td><?= $data["harga"]; ?></td>
                                 <td><?= $data["kategori"]; ?></td>
                                 <td><?= $data["upload"]; ?></td>
-                                <td><a href="hapus-data-register.php?id=<?= $data["id"]; ?>" onclick="return confirm('Apakah Anda Yakin?')" style="color: red;"> Hapus </a> | <a href="edit-data-register.php?id=<?= $data['id']; ?>"> Edit</a></td>
+                                <td><a href="hapus-data.php?id=<?= $data["id"]; ?>" onclick="return confirm('Apakah Anda Yakin?')" style="color: red;"> Hapus </a> | <a href="edit-data.php?id=<?= $data['id']; ?>"> Edit</a></td>
                             </tr>
                             <?php $i++; ?>
                         <?php endforeach; ?>

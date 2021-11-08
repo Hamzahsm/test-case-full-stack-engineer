@@ -13,14 +13,11 @@
     <title>Signup Form</title>
 </head>
 
-<body style="background-color: #570000;">
+<body>
 
     <div class="container" style="margin-top: 30px;">
         <div class="col-8" style="margin: auto;">
-            <form style="background-color: white; padding: 20px; border-radius: 10px;" action="signup-user.php" method="POST">
-                <div style="text-align: center; margin-bottom: 20px;">
-                    <img src="https://oesman.id/wp-content/uploads/2020/08/OESMAN_logo-4.png" width="240px" height="80px" class="img-fluid">
-                </div>
+            <form style="background-color: white; padding: 20px; border-radius: 10px; border: 1px solid silver;box-shadow: 5px 5px 5px silver;" action="signup-user.php" method="POST">
                 <h2 class="text-center">Registration</h2>
                 <?php
                 if (count($errors) == 1) {
@@ -64,7 +61,7 @@
 
 
                 <div class="form-group mt-3">
-                    <input class="form-control button" type="submit" name="signup" value="Signup">
+                    <input class="form-control button btn-primary" type="submit" name="signup" value="Signup">
                 </div>
                 <div class="link login-link text-center mt-3">Sudah Memiliki Akun? <a href="index.php">Login here</a></div>
             </form>

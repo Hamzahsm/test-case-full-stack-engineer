@@ -5,19 +5,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
     <title>Login Form</title>
 </head>
-
-<body style="background-color: #570000;">
+<body>
 
     <div class="container" style="margin-top: 30px;">
         <div class="col-8" style="margin: auto;">
-            <form style="background-color: white; padding: 20px; border-radius: 10px;" action="index.php" method="POST">
-                <div style="text-align: center; margin-bottom: 20px;">
-                    <img src="https://oesman.id/wp-content/uploads/2020/08/OESMAN_logo-4.png" width="240px" height="80px" class="img-fluid">
+            <form style="background-color: white; padding: 20px; border-radius: 10px; border: 1px solid silver;box-shadow: 5px 5px 5px silver;" action="index.php" method="POST" >
+
+                <div class=" container mt-3 mb-3">
+                    <h2 class="text-center">LOGIN TEST CASE</h2>
                 </div>
 
                 <?php
