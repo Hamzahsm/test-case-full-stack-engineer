@@ -1,18 +1,20 @@
 <?php require_once "controllerUserData.php"; ?>
-<?php 
-$email = $_SESSION['email'];
-if($email == false){
-  header('Location: index.php');
-}
-?>
+<!-- <?php
+        $email = $_SESSION['email'];
+        if ($email == false) {
+            header('Location: index.php');
+        }
+        ?> -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Code Verification</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="row">
@@ -22,26 +24,26 @@ if($email == false){
                         <img src="https://oesman.id/wp-content/uploads/2020/08/OESMAN_logo-4.png" width="250px;" height="80px;">
                     </div>
                     <h2 class="text-center">Code Verification</h2>
-                    <?php 
-                    if(isset($_SESSION['info'])){
-                        ?>
+                    <?php
+                    if (isset($_SESSION['info'])) {
+                    ?>
                         <div class="alert alert-success text-center">
                             <?php echo $_SESSION['info']; ?>
                         </div>
-                        <?php
+                    <?php
                     }
                     ?>
                     <?php
-                    if(count($errors) > 0){
-                        ?>
+                    if (count($errors) > 0) {
+                    ?>
                         <div class="alert alert-danger text-center">
                             <?php
-                            foreach($errors as $showerror){
+                            foreach ($errors as $showerror) {
                                 echo $showerror;
                             }
                             ?>
                         </div>
-                        <?php
+                    <?php
                     }
                     ?>
                     <div class="form-group">
@@ -54,6 +56,7 @@ if($email == false){
             </div>
         </div>
     </div>
-    
+
 </body>
+
 </html>
