@@ -29,7 +29,7 @@ if (isset($_POST['signup'])) {
         if ($data_check) {
             $subject = "Email Verification Code";
             $message = "Kode Verifikasi kamu adalah $code";
-            $sender = "From: OESMAN";
+            $sender = "From: Hamzah Saiful Madjid";
             if (mail($email, $subject, $message, $sender)) {
                 $info = "Kami telah mengirim kode OTP ke alamat - $email";
                 $_SESSION['info'] = $info;
